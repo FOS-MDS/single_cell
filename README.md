@@ -1,2 +1,1 @@
-# single_cell
-Single Cell Sequencing
+Single-cell RNA sequencing (scRNA-seq) 

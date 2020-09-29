@@ -5,7 +5,10 @@ output: html_document
 
 Load in packages
 
+**You will be prompted to install Miniconda - please type `Y` on prompt.**
+
 ```{r}
+library(hdf5r)
 library(Seurat)
 library(scater)
 library(scran)

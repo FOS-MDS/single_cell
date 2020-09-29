@@ -1,0 +1,23 @@
+---
+title: "Practical-Launch"
+output: html_document
+---
+
+Load in packages
+
+```{r}
+library(Seurat)
+library(scater)
+library(scran)
+library(Matrix)
+```
+
+Load expression matrices into R
+
+```{r}
+v3.1k <- Read10X_h5('./data/pbmc_1k_v3_filtered_feature_bc_matrix.h5', use.names = T)
+v2.1k <- Read10X_h5("pbmc_1k_v2_filtered_feature_bc_matrix.h5", use.names = T)
+p3.1k <- Read10X_h5("pbmc_1k_protein_v3_filtered_feature_bc_matrix.h5", use.names = T)
+```
+
+

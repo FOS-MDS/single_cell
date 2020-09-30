@@ -8,22 +8,41 @@ Load in packages
 **You will be prompted to install Miniconda - please type `Y` on prompt.**
 
 ```{r}
+library(tidyverse)
 library(hdf5r)
 library(SingleCellExperiment)
 library(EnsDb.Hsapiens.v86)
 library(DelayedMatrixStats)
+
 library(Seurat)
+library(cowplot)
 library(scater)
 library(scran)
 library(Matrix)
+library(igraph)
+library(monocle)
+library(cellrangerRkit)
 ```
 
-Load expression matrices into R
+Load expression matrices into R for Practical 1
 
 ```{r}
 v3.1k <- Read10X_h5('./data/pbmc_1k_v3_filtered_feature_bc_matrix.h5', use.names = T)
 v2.1k <- Read10X_h5('./data/pbmc_1k_v2_filtered_feature_bc_matrix.h5', use.names = T)
 p3.1k <- Read10X_h5('./data/pbmc_1k_protein_v3_filtered_feature_bc_matrix.h5', use.names = T)
 ```
+
+Load Deng et al. 2014 data into R for Practical 2
+
+```{r}
+deng <- readRDS('./data/deng-reads.rds')
+```
+
+Load PBMC data into R for Practical 3
+
+```{r}
+# load('./data/2K_pbmc_subset1.RData', verbose=FALSE)
+```
+
 
 

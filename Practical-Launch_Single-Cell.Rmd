@@ -9,6 +9,8 @@ Load in packages
 
 ```{r}
 library(hdf5r)
+library(SingleCellExperiment)
+library(EnsDb.Hsapiens.v86)
 library(Seurat)
 library(scater)
 library(scran)

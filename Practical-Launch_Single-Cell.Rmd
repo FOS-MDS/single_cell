@@ -11,6 +11,7 @@ Load in packages
 library(hdf5r)
 library(SingleCellExperiment)
 library(EnsDb.Hsapiens.v86)
+library(DelayedMatrixStats)
 library(Seurat)
 library(scater)
 library(scran)

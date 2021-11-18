@@ -185,7 +185,7 @@ DimPlot(pbmc, reduction = "tsne", label = TRUE) + NoLegend()
 If you want to cluster the cells at a higher resolution, you could for instance subset the data now and repeat these steps. For now, we will just save the object for the next practicals.
 
 ```{r, export}
-saveRDS(pbmc, file = "pbmc3k_Clust.rds")
+saveRDS(pbmc, file = "./out/pbmc3k_Clust.rds")
 ```
 
 

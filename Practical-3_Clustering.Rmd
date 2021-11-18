@@ -28,7 +28,7 @@ During the previous practical, we have already selected highly variable genes. T
 
 
 ```{r load}
-pbmc <- readRDS('pbmc3k_DR.rds')
+pbmc <- readRDS('./data/pbmc3k_DR.rds')
 ```
 
 ## Clustering

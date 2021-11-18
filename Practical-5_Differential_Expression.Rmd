@@ -29,7 +29,7 @@ require(pheatmap)
 We will continue with our PBMC dataset.
 
 ```{r, load}
-pbmc <- readRDS(file = "pbmc3k_Clust.rds")
+pbmc <- readRDS(file = "./data/pbmc3k_Clust.rds")
 ```
 
 ## Differential expression testing in Seurat

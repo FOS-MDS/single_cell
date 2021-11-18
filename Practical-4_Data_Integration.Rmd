@@ -39,17 +39,17 @@ First, we load the three datasets and some celltype labels.
 
 ```{r load}
 
-pbmc_v3.1k <- readRDS('pbmc3k_Clust.rds')
-v2.1k <- Read10X_h5("pbmc_1k_v2_filtered_feature_bc_matrix.h5")
-p3.1k <- Read10X_h5("pbmc_1k_protein_v3_filtered_feature_bc_matrix.h5")
+pbmc_v3.1k <- readRDS('./data/pbmc3k_Clust.rds')
+v2.1k <- Read10X_h5("./data/pbmc_1k_v2_filtered_feature_bc_matrix.h5")
+p3.1k <- Read10X_h5("./data/pbmc_1k_protein_v3_filtered_feature_bc_matrix.h5")
 
 p3.1k <- p3.1k$`Gene Expression`
 
 pbmc_v2.1k <- CreateSeuratObject(v2.1k, project = "v2.1k")
 pbmc_p3.1k <- CreateSeuratObject(p3.1k, project = "p3.1k")
 
-labels_v2.1k = read.delim('celltypes_1k_v2.tsv', row.names = 1)
-labels_p3.1k = read.delim('celltypes_1k_protein.tsv', row.names = 1)
+labels_v2.1k = read.delim('./data/celltypes_1k_v2.tsv', row.names = 1)
+labels_p3.1k = read.delim('./data/celltypes_1k_protein.tsv', row.names = 1)
 
 pbmc_v2.1k <- AddMetaData(
     object = pbmc_v2.1k,

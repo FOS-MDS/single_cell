@@ -34,8 +34,8 @@ library(ggplot2)
 First, we load the Seurat object from the previous practical and attach the celltype labels.
 
 ```{r, load}
-pbmc = readRDS('pbmc3k_QC.rds')
-labels = read.delim('celltype_labels.tsv', row.names = 1)
+pbmc = readRDS('./data/pbmc3k_QC.rds')
+labels = read.delim('./data/celltype_labels.tsv', row.names = 1)
 pbmc <- AddMetaData(
 	object = pbmc,
 	metadata = labels)
@@ -291,7 +291,7 @@ HoverLocator(plot = interactivePlot, information = FetchData(pbmc, vars = c("cel
 Save the Seurat object with the new embeddings for future use downstream. 
 
 ```{r, export}
-saveRDS(pbmc, file = "pbmc3k_DR.rds")
+saveRDS(pbmc, file = "./out/pbmc3k_DR.rds")
 ```
 
 If you're interested in more ways to visualize your data, [this vignette](https://satijalab.org/seurat/articles/visualization_vignette.html) might be useful.

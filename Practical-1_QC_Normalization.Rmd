@@ -47,9 +47,9 @@ library(Matrix)
 Here, we use the function `Read10X_h5` of the Seurat package to read in the expression matrices. R stores these matrices as sparse matrix objects, which are essentially memory-efficient tables of values. In this case the values represent the RNA counts in each cell.
 
 ```{r, load, warning=FALSE}
-v3.1k <- Read10X_h5("pbmc_1k_v3_filtered_feature_bc_matrix.h5")
-v2.1k <- Read10X_h5("pbmc_1k_v2_filtered_feature_bc_matrix.h5")
-p3.1k <- Read10X_h5("pbmc_1k_protein_v3_filtered_feature_bc_matrix.h5")
+v3.1k <- Read10X_h5("./data/pbmc_1k_v3_filtered_feature_bc_matrix.h5")
+v2.1k <- Read10X_h5("./data/pbmc_1k_v2_filtered_feature_bc_matrix.h5")
+p3.1k <- Read10X_h5("./data/pbmc_1k_protein_v3_filtered_feature_bc_matrix.h5")
 # select only gene expression data from the CITE-seq data.
 p3.1k <- p3.1k$`Gene Expression`
 ```
@@ -338,7 +338,7 @@ head(pbmc.seu[["RNA"]][[]])
 We will save the Seurat object for future analysis downstream. 
 
 ```{r, export}
-saveRDS(pbmc.seu, file = "pbmc3k_QC.rds")
+saveRDS(pbmc.seu, file = "./out/pbmc3k_QC.rds")
 ```
 
 **Question 2**  Perform normalization and Feature selection for dataset p3.1k using Seurat: Please check which parameters will stay same or change when using different dataset (e.g. Mitochondrial content percentage etc.). Save the object as pbmc3p.rds

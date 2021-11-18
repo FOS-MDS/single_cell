@@ -173,7 +173,7 @@ To illustrate this we will use an example from ["Orchestrating Single-Cell Analy
 In this example, we will compare alpha and gamma cells in the human pancreas data set from Lawlor et al. (2017)
 
 ```{r, scran_g, fig.wide=TRUE, fig.asp=2, fig.width=8}
-sce.lawlor <- readRDS(file = "sce_lawlor.rds")
+sce.lawlor <- readRDS(file = "./data/sce_lawlor.rds")
 marker.lawlor.t <- findMarkers(sce.lawlor, groups=sce.lawlor$`cell type`, 
                                direction="up", restrict=c("Alpha", "Gamma/PP"))
 marker.lawlor.w <- findMarkers(sce.lawlor, groups=sce.lawlor$`cell type`, 
